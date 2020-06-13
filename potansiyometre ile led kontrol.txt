@@ -1,0 +1,16 @@
+// detaylar için youtube yusufbugra yazarak videolar kısmından ulaşabilirsiniz//
+
+int led = 10;
+int pot = A0;
+int potdeger;
+void setup(){
+  pinMode( led , OUTPUT); 
+pinMode( pot,INPUT);
+
+}
+void loop(){
+potdeger=analogRead(pot);
+potdeger = map (potdeger ,0, 1023 , 0 , 255 );
+analogWrite(led , potdeger);
+  
+}
